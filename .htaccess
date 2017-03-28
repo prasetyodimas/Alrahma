@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule ^home\.html$ index.php?pg=home [L]
+RewriteRule ^gallery\.html$ index.php?pg=gallery [L]
+RewriteRule ^about\.html$ index.php?pg=about [L]
+RewriteRule ^contact\.html$ index.php?pg=contact [L]
+RewriteRule ^career\.html$ index.php?pg=career [L]
+RewriteRule ^careerdetail([0-9]+)-(.*)\.html$ index.php?pg=careerdetail&id=$1 [L]
+RewriteRule ^news\.html$ index.php?pg=news [L]
+RewriteRule ^news([0-9]+)-(.*)\.html$ index.php?pg=news&a=$1&halaman=$2 [L]
+RewriteRule ^newsdetail([0-9]+)-(.*)\.html$ index.php?pg=newsdetail&id=$1 [L]
+RewriteRule ^event\.html$ index.php?pg=event [L]
+RewriteRule ^eventdetail-(.*)\.html$ index.php?pg=eventdetail&id=$1 [L]
+RewriteRule ^consultasi\.html$ index.php?pg=consultasi [L]
+RewriteRule ^consultasi\.html$ index.php?pg=consultasi&hal=&halaman=$2 [L]
+
+Options All -Indexes
+</IfModule>
