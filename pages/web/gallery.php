@@ -18,34 +18,31 @@
 
   });
 </script>
-
 <section class="container">
-	<div class="wrapper-outerspaces">
-		<ul class="nav-ul-breadcumb">
-			<li class="nav-li-breadcumb"><i class="fa fa-home"></i> Home >> Gallery</li>
-		</ul>
-		<div class="wrapper-gallerys">
-			<center>
-		    	<h3>Gallery Al-Rahma Preschool and Kindergarten</h3>
-			</center>
-			<div class="container-gallery gallery">
-			<?php
+	<ul class="nav-ul-breadcumb">
+		<li class="nav-li-breadcumb"><i class="fa fa-home"></i> Home >> Gallery</li>
+	</ul>
+	<div class="wrapper-gallerys">
+		<center>
+	    	<h3>Gallery Al-Rahma Preschool and Kindergarten</h3>
+		</center>
+		<div class="container-gallery gallery">
+		<?php
 
-				$getgalle = mysqli_query($con,"SELECT * FROM gallery");
-				while ($res = mysqli_fetch_array($getgalle)) {
-				$photo = $base_url."uploads/images/gallery/".$res['foto_gallery'];
-			?>
-				<div class="box-gallery ">
-					<a href="<?php echo $photo;?>" rel="prettyPhoto[pp_gal]" title="">
-						<img class="sizing-gallery lazyOwl img-responsive" src="<?php echo $photo;?>" />
-					</a>
-					<div class="heading-text">
-						<?php echo strip_tags($res['keterangan']); ?>
-					</div>
+			$getgalle = mysqli_query($con,"SELECT * FROM gallery");
+			while ($res = mysqli_fetch_array($getgalle)) {
+			$photo = $base_url."uploads/images/gallery/".$res['foto_gallery'];
+		?>
+			<div class="box-gallery ">
+				<a href="<?php echo $photo;?>" rel="prettyPhoto[pp_gal]" title="">
+					<img class="sizing-gallery lazyOwl img-responsive" src="<?php echo $photo;?>" />
+				</a>
+				<div class="heading-text">
+					<?php echo strip_tags($res['keterangan']); ?>
 				</div>
-			<?php } ?>
 			</div>
+		<?php } ?>
 		</div>
-		<div style="margin-bottom:50px;"></div>
 	</div>
+	<div style="margin-bottom:50px;"></div>
 </section>

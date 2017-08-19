@@ -4,23 +4,18 @@
     	//config autoslide and frameming gallery pretty foto
     	$(".career:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:2000, autoplay_slideshow: false});
     	$(".career:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:20000, hideflash: true});
-
     	$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
     		custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
     		changepicturecallback: function(){ initialize(); }
     	});
-
     	$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
     		custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
     		changepicturecallback: function(){ _bsap.exec(); }
     	});
   });
 </script>
-
 <?php include "libs/funct/library_function.php"; ?>
-
 <section class="container">
-<div class="wrapper-outerspaces">
 	<ul>
 		<li><i class="fa fa-home"></i> Home >> Career </li>
 	</ul>
@@ -42,9 +37,7 @@
     </div>
 </div>
 <?php
-
 	include "libs/funct/paging.php";
-
 	//variable paging mencari posisi batas
 	$p= new Paging_careeruser;
 	$batas=5;
@@ -52,7 +45,6 @@
 
 	$getcareer = mysqli_query($con,"SELECT  * FROM career LIMIT $posisi, $batas");
 	while ($data = mysqli_fetch_array($getcareer)) {
-
 	//filter judul 
 	$filter_judul = preg_replace("/\s/","-",$data['judul_career']);
 	//url career detail
@@ -105,5 +97,4 @@
 	        </div>
 	    </div>
 	  </div>
-</div><!-- wrapper-outerspaces -->
 </section>

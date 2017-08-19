@@ -1,13 +1,12 @@
 <section class="container">
-	<div class="wrapper-outerspaces">
-		<ul class="nav-ul-breadcumb">
-			<li class="nav-li-breadcumb"><i class="fa fa-home"></i> Home >> Event</li>
-		</ul>
-		<center>
-	    	<h3>Event Al-Rahma Preschool and Kindergarten</h3>
-		</center>  
-		<div class="wraperouter-event">
-			<ul class="nav-ul-event">
+	<ul class="nav-ul-breadcumb">
+		<li class="nav-li-breadcumb"><i class="fa fa-home"></i> Home >> Event</li>
+	</ul>
+	<center>
+    	<h3>Event Al-Rahma Preschool and Kindergarten</h3>
+	</center>  
+	<div class="wraperouter-event">
+		<ul class="nav-ul-event">
 		<?php 
 
 			$getgalle = mysqli_query($con,"SELECT * FROM event");
@@ -28,8 +27,7 @@
 	            </li>
 			<?php } ?>
 	      	</ul>
-      	<div style="margin-bottom:0px;display:inline-block;"></div>
-      	</div>
+	  	<div style="margin-bottom:0px;display:inline-block;"></div>
   	</div>
 </section>
 

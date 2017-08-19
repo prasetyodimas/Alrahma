@@ -12,11 +12,10 @@ include"config/config.php"; ?>
 <!-- Mobile Specific Meta -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!-- FAVICONS-->
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo $base_url?>img/favicon-alrahma.png" type="image/x-icon">
+<link rel="icon" href="<?php echo $base_url?>img/favicon-alrahma.png" type="image/x-icon">
 <!-- CSS -->
 <link rel="stylesheet" href="<?php echo $base_url;?>css/bootstrap.min.css">
-<link rel="stylesheet" href="<?php echo $base_url;?>css/responsive.css">
 <link rel="stylesheet" href="<?php echo $base_url;?>css/theme/css/layout.css">
 <link rel="stylesheet" href="<?php echo $base_url;?>css/lightbox.css">
 <link rel="stylesheet" href="<?php echo $base_url;?>js/slick/slick.css">
@@ -129,7 +128,7 @@ include"config/config.php"; ?>
 		<footer>
 			<div class="container">
 			    <div class="main-innerfooter">
-			    	Copyright © <?php echo "Al-Rahma Islamic School ".date("Y");?>
+			    	Copyright © <?php echo "Al-Rahma Preschool and Kindergarten 2017 ".date("Y");?>
 			    </div>
 			    <ul id="nav-footer " style="margin-bottom:0px!important;">
 			    	<li class="li-nav-alrahma">

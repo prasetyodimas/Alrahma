@@ -1,6 +1,5 @@
 <?php include "libs/funct/library_function.php";?>
 <div class="container">
-	<div class="wrapper-outerspaces">
 	<ul class="nav-ul-breadcumb">
 		<li class="nav-li-breadcumb"><i class="fa fa-home"></i> Home >> News</li>
 	</ul>
@@ -76,5 +75,7 @@
 		            ?>
 		            </ul>
 		        </div>
-		    </div>
+			</div>
+		</div>
+	</div>
 </div>
