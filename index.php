@@ -4,11 +4,12 @@ include"config/config.php"; ?>
 <html lang="en">
 <head>
 <title>Al – Rahma Preschool and Kindergarten</title>
+<!-- ANALYTICS JS -->
 <meta charset="utf-8">
 <meta name="author" content="Al-Rahma Presschool and Kindergarten <vladclaystudios>">
 <meta name="description" content="Konsultan pendidikan, Konsultasi, Study, Pembelajaran Terpadu, Belajar Dan Bermain, Edukasi, Interaktif, Dunia Anak-anak, PAUDTKSD, Alquran, Sekolah Anak, AlRahma Presschool and Kindergarten sekolah dan yayasan konsultasi,dunia pembelajaran anak-anak,dunia perkembangan anak sebelum memasuki pra sekolah, menerapkan sistem alquran sebagai media dan metode pembelajarannya, Alrahma, PAUDTKSD">
 <meta name="keywords" content="Konsultan pendidikan, Konsultasi, Study, Pembelajaran Terpadu, Belajar Dan Bermain, Edukasi, Interaktif, Dunia Anak-anak, PAUDTKSD, Alquran, Sekolah Anak, AlRahma Presschool and Kindergarten sekolah dan yayasan konsultasi,dunia pembelajaran anak-anak,dunia perkembangan anak sebelum memasuki pra sekolah, menerapkan sistem alquran sebagai media dan metode pembelajarannya, Alrahma, PAUDTKSD">
-<!-- Mobile Specific Metas -->
+<!-- Mobile Specific Meta -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!-- FAVICONS-->
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -16,7 +17,7 @@ include"config/config.php"; ?>
 <!-- CSS -->
 <link rel="stylesheet" href="<?php echo $base_url;?>css/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo $base_url;?>css/responsive.css">
-<link rel="stylesheet" href="<?php echo $base_url;?>css/layout.css">
+<link rel="stylesheet" href="<?php echo $base_url;?>css/theme/css/layout.css">
 <link rel="stylesheet" href="<?php echo $base_url;?>css/lightbox.css">
 <link rel="stylesheet" href="<?php echo $base_url;?>js/slick/slick.css">
 <link rel="stylesheet" href="<?php echo $base_url;?>js/slick/slick-theme.css">
@@ -30,59 +31,36 @@ include"config/config.php"; ?>
 <!-- JQUERY JS -->
 <script type="text/javascript" src="<?php echo $base_url; ?>js/jquery-1.9.1.min.js"></script>
 <script src="<?php echo $base_url?>js/jquery.validate.js"></script>
-<script src="<?php echo $base_url;?>js/scrollto.js"></script>
+<script src="<?php echo $base_url;?>js/app-main-alrahma.js"></script>
 <script src="<?php echo $base_url;?>js/bootstrap.min.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="<?php echo $base_url;?>js/slick/slick.js"></script>
 <script src="<?php echo $base_url;?>js/pretty-foto/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php echo $base_url;?>js/gallery.js"></script>
 <script src="<?php echo $base_url;?>js/owl-carousel/owl.carousel.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		//function slider owl-carousel
-		$("#owl-example").owlCarousel({
-		   	  autoPlay: 5000, //Set AutoPlay to 3 seconds
-		      navigation : true, // Show next and prev buttons
-		      singleItem:true,
-		      lazyLoad :true,// effect images lazy loads
-		      transitionStyle : "fadeUp"// make transistion effect
-		});
-	   	var senseSpeed = 1;
-		var previousScroll = 0;
-		$(window).scroll(function(event){
-		   var scroller = $(this).scrollTop();
-		   if (scroller-senseSpeed > previousScroll){
-		      $("div.navigate-top-upper").filter(':not(:animated)').slideUp();
-		   }else if (scroller+senseSpeed < previousScroll) {
-		      $("div.navigate-top-upper").filter(':not(:animated)').slideDown();
-		   }
-			   previousScroll = scroller;
-		   });
-		});
-</script>
 </head>
 <style type="text/css">
-	.main-heading-alrahma{
-		padding: 10px;
-	}
-	div.navigate-top-upper {
-	    position:relative;
-	    bottom:0;
-	    right:0;
-	}
-	span {
-	    color:white;
-	}
-
+	.main-heading-alrahma{padding: 10px; } div.navigate-top-upper {position:relative; bottom:0; right:0; } span {color:#000;} 
 </style>
 <body>
 <!-- responsive menu on mobile device -->
-<div class="container navigate-top-upper">
-	<div class="col-lg-12 ">
-		<div class="row">
-			<div class="col-md-2">
-				<div class="main-heading-alrahma">
-	        		<div><img src="img/alrahma-logos.png"></div>
+	<div class="container navigate-top-upper">
+		<div class="col-lg-12 col-md-6 col-xs-12 col-sm-12">
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="pull-left col-sm-12 col-lg-3">
+	        			<img src="img/alrahma-logos.png" class="img-responsive" style="width:185px;height:auto;margin-top: 15px;">
+						<h6 class="text-center"><strong>ISLAMIC PRESSCHOOL & KINDERGARTEN</strong></h6>
+					</div>
+					<div class="pull-left">
+						<div class="col-sm-12 col-md-6 col-lg-12">
+							<div class="container-header">
+								<h2>Al Rahma</h2>
+								<h3>Islamic Preschol And Kindergarten</h3>
+								<h5>Jln.Linggamas No 8 Sokaraja Wetan Banyumas 53181</h5>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-7">
@@ -100,60 +78,69 @@ include"config/config.php"; ?>
 			</div>
 		</div>
 	</div>
-</div>
-<nav id="mobile" class="navbar navbar-default" role="navigation">
-	<div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="sr-only">Toggle Responsive</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-    </div>
-	<?php $url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; if($url == $base_url."home.html") {$url_home = "current"; } elseif ($url== $base_url."gallery.html") {$url_gallery ="current"; } elseif ($url== $base_url."event.html") {$url_event ="current"; } elseif ($url== $base_url."news.html") {$url_news ="current"; } elseif ($url== $base_url."about.html") {$url_about ="current"; } elseif ($url== $base_url."contact.html") {$url_contact ="current"; } elseif ($url== $base_url."consultasi.html") {$url_consultation ="current"; } elseif ($url== $base_url."career.html") {$url_career ="current"; } ?>
-	 <div class="container">
-        	<div class="row"> 
-				<!-- <div id="logo"></div> -->
-				<div class="collapse navbar-collapse col-md-offset-1" id="navbar-collapse">
-					<!-- id="main-nav" class="sf-menu" -->
-					<ul class="nav navbar-nav">
-						<li><a href="<?php echo $base_url; ?>home.html" id="<?php echo $url_home;?>">Home</a></li>
-						<li><a href="<?php echo $base_url; ?>gallery.html" id="<?php echo $url_gallery;?>">Gallery</a></li>
-						<li><a href="<?php echo $base_url; ?>news.html" id="<?php echo $url_news;?>">News</a></li>
-						<li><a href="<?php echo $base_url; ?>event.html" id="<?php echo $url_event;?>">Event</a></li>
-						<li><a href="<?php echo $base_url; ?>about.html" id="<?php echo $url_about;?>">About Us</a></li>
-						<li><a href="<?php echo $base_url; ?>contact.html" id="<?php echo $url_contact;?>">Contact Us</a></li>
-						<li><a href="<?php echo $base_url; ?>consultasi.html" id="<?php echo $url_consultation;?>">Consultation</a></li>
-					<li><a href="<?php echo $base_url; ?>career.html" id="<?php echo $url_career;?>">Career</a></li>
-				</ul>
-			</div>
-        	</div>
-        </div><!--container-->
-	</nav><!-- end main nav -->
-</div><!-- end container -->
-<!--================================ CONTENT START HERE ========================================-->
-<div class="wrapper-coantainer-moduls">
-	<?php  include "libs/funct/conf_page.php";?>
-</div>
-<div class="main scroll-to">
-	<a id="balikkeatas" onclick="keatas()"><img src="<?php echo $base_url;?>img/arrows.png"></a>
-</div>
-	<footer>
-		<div class="container">
-	   <!-- <nav class="eleven columns" align="center"> -->
-		    <div class="main-innerfooter">
-		    	Copyright © <?php echo "Al-Rahma Preschool and Kindergarten ".date("Y");?> - Versi Beta Dalam Tahap Pengembangan -
-		    </div>
-		    <ul id="nav-footer " style="margin-bottom:0px!important;">
-		    	<li class="li-nav-alrahma">
-	    			<span><a href=""><img src="img/instagram.png"></a></span>
-	    			<span style="margin-left:3px;"><a href=""><img src="img/facebook.png"></a></span>
-	    			<span style="margin-left:3px;"><a href=""><img src="img/twitter.png"></a></span>
-		    	</li>
-		    </ul>
+	<nav id="mobile" class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+	            <span class="sr-only">Toggle Responsive</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	        </button>
+	    </div>
+		<?php $url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; 
+			if($url == $base_url."home.html") {$url_home = "current"; } 
+			elseif ($url== $base_url."gallery.html") {$url_gallery ="current"; } 
+			elseif ($url== $base_url."event.html") {$url_event ="current"; } 
+			elseif ($url== $base_url."news.html") {$url_news ="current"; } 
+			elseif ($url== $base_url."about.html") {$url_about ="current"; } 
+			elseif ($url== $base_url."contact.html") {$url_contact ="current"; } 
+			elseif ($url== $base_url."consultasi.html") {$url_consultation ="current"; } 
+			elseif ($url== $base_url."career.html") {$url_career ="current"; } 
+		?>
+		 <div class="container">
+	        	<div class="row"> 
+					<!-- <div id="logo"></div> -->
+					<div class="collapse navbar-collapse col-md-offset-1" id="navbar-collapse">
+						<!-- id="main-nav" class="sf-menu" -->
+						<ul class="nav navbar-nav">
+							<li><a href="<?php echo $base_url; ?>home.html" id="<?php echo $url_home;?>">Home</a></li>
+							<li><a href="<?php echo $base_url; ?>gallery.html" id="<?php echo $url_gallery;?>">Gallery</a></li>
+							<li><a href="<?php echo $base_url; ?>news.html" id="<?php echo $url_news;?>">News</a></li>
+							<li><a href="<?php echo $base_url; ?>event.html" id="<?php echo $url_event;?>">Event</a></li>
+							<li><a href="<?php echo $base_url; ?>about.html" id="<?php echo $url_about;?>">About Us</a></li>
+							<li><a href="<?php echo $base_url; ?>contact.html" id="<?php echo $url_contact;?>">Contact Us</a></li>
+							<li><a href="<?php echo $base_url; ?>consultasi.html" id="<?php echo $url_consultation;?>">Consultation</a></li>
+							<li><a href="<?php echo $base_url; ?>career.html" id="<?php echo $url_career;?>">Career</a></li>
+						</ul>
+					</div>
+	        	</div>
+	        </div><!--container-->
+		</nav><!-- end main nav -->
+	</div><!-- end container -->
+	<!--================================ CONTENT START HERE ========================================-->
+	<div class="wrapper-coantainer-moduls">
+		<div class="container-fluid">
+			<?php  include "libs/funct/conf_page.php";?>
 		</div>
-	</footer><!-- footer  -->
-</div>
+	</div>
+	<div class="main scroll-to">
+		<a id="balikkeatas" onclick="keatas()"><img src="<?php echo $base_url;?>img/arrows.png"></a>
+	</div>
+		<footer>
+			<div class="container">
+			    <div class="main-innerfooter">
+			    	Copyright © <?php echo "Al-Rahma Islamic School ".date("Y");?>
+			    </div>
+			    <ul id="nav-footer " style="margin-bottom:0px!important;">
+			    	<li class="li-nav-alrahma">
+		    			<span><a href=""><img src="img/instagram.png"></a></span>
+		    			<span style="margin-left:3px;"><a href=""><img src="img/facebook.png"></a></span>
+		    			<span style="margin-left:3px;"><a href=""><img src="img/twitter.png"></a></span>
+			    	</li>
+			    </ul>
+			</div>
+		</footer><!-- footer  -->
+	</div>
 </body>
 </html>
 

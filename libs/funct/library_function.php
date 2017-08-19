@@ -85,6 +85,17 @@ function getBulan($bln){
     break;
     }
 }
+
+function cleanSanitazeXss($string) {
+   $string = str_replace(' ', ' ', $string); // Replaces all spaces with hyphens.
+   return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+}
+
+function cleanUrlXssAttack($data){
+    $data = rawurldecode($data);
+    return filter_var($data, FILTER_SANITIZE_SPECIAL_CHARS);
+}
+
 ?>
 <script type="text/javascript">
 //these function is blocked a text just to allowed input number

@@ -13,7 +13,7 @@
 				<div class="main-formsearch-news">
 				<form method="post" action="" id="frm1">
 					<select class="select-news" name="status_news" onclick="selectVal();">
-						<option>-- Filter Berita  --</option>
+						<option> Filter Berita </option>
 						<option>hits</option>
 						<option>populer</option>
 						<option>biasa</option>

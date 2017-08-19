@@ -14,10 +14,8 @@
       </tr>
     </thead>
     <?php
-
       include "../libs/funct/paging.php";
       include "../libs/funct/library_function.php";
-
       //variable paging mencari posisi batas
       $p= new Paging_mantestimoni;
       $batas=5;
@@ -33,7 +31,7 @@
           <td><?php echo $res['nama_testi'];?></td>
           <td><?php echo $res['email'];?></td>
           <td width="100"><?php echo tgl_indo($res['tgl_testi']);?></td>
-          <td><?php echo $res['keluhan_testi'];?></td>
+          <td width="50"><?php echo $res['keluhan_testi'];?></br></td>
           <td width="110">
               <a href="homeadmin.php?pg=answertesti&id=<?php echo $res['id_testimoni'];?>"><i></i> Answer</a> ||
               <a href="proses/proses_testi.php?act=deletetesti&id=<?php echo $res['id_testimoni'];?>"><i></i> Delete </a>
