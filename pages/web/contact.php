@@ -46,13 +46,14 @@
 						<h2><i class="fa fa-phone"></i> Contact</h2>
 					</div><!-- head -->
 					<ul class="street">
-						Email : Alrahmaprescholandkindergarten@gmail.com</br>
-						Hp : 081904133839-082215032895
+						Email : admin@alrahma.id</br>
+						Hp    : 081329542882
 					</ul>
 					<div class="head headbottom">
 						<h2><i class="fa fa-home"></i> Head Office<h2>
 					</div>
-					<ul class="street"> Address: Jl. Dsn Lorem Ipsum no. 267, Banyumas, 55282 <br> Telp / fax : 0274-433701.</ul>
+					Address: Jl. 
+					<ul class="street"> Address: Jl. Linggamas No 8 Sokaraja Wetan - Banyumas 531812<br> Telp / fax :08132954288</ul>
 				</div><!--box_cont -->
 			</div><!-- box-wrap-->
 	    <div class="form">

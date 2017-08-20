@@ -1,22 +1,21 @@
 <?php 
-$nama     = isset($_POST['nama']) ? trim(htmlentities($_POST['nama'])):'';
-$komentar = isset($_POST['komentar']) ? trim(htmlentities($_POST['komentar'])):'';
-
-/* untuk menampung variabel post dari captcha google adalah g-recaptcha-reponse */
-$captcha = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response']:'';
+/* ==== CAPTHCA DOCUMENTATION === */
 
 /*Site key paudtkdsd.com
 Use this in the HTML code your site serves to users.
 6LfsgCcTAAAAAOaVp5SSLt5aM-XTpnplfeHi9l0w
-
 Secret key paudtksd.com
 Use this for communication between your site and Google. Be sure to keep it a secret.
 6LfsgCcTAAAAAFRvSHjsiV2AE_-jWrh8GKLLJX2k*/
 
+$nama       = isset($_POST['nama']) ? trim(htmlentities($_POST['nama'])):'';
+$komentar   = isset($_POST['komentar']) ? trim(htmlentities($_POST['komentar'])):'';
+/* untuk menampung variabel post dari captcha google adalah g-recaptcha-reponse */
+$captcha    = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response']:'';
+
 //masukkan secret key-nya berdasarkan secret key masig-masing saat create api key nya
 $secret_key = '6LfsgCcTAAAAAFRvSHjsiV2AE_-jWrh8GKLLJX2k'; 
-
-$error = 'Gagal kirim form: periksa nama, komentar dan captcha nya';
+$error      = 'Gagal kirim form: periksa nama, komentar dan captcha nya';
 
 if ($captcha != '' && $nama != '' && $komentar != '') {
    $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secret_key) . '&response=' . $captcha;   
@@ -39,7 +38,7 @@ if ($captcha != '' && $nama != '' && $komentar != '') {
      
 }else{
   echo "<script language='javascript'>
-             alert ('Mbok ya di isi dulu captcha nya bos')
+             alert ('Maaf silahkan isi terlebih dahulu !!')
              top.location='index.php';               
              </script>";
       

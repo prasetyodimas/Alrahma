@@ -1,6 +1,5 @@
 <?php
-
-//conection
+//conection configuration
 $dbhost   	="localhost";
 $dbuser   	="root";
 $dbpass   	="";
