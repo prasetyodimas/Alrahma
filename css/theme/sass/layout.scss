@@ -13,33 +13,34 @@
 =============================================== */
 @font-face {
     font-family: 'junctionbold';
-    src: url('junction-bold-webfont.woff2') format('woff2'),
-         url('junction-bold-webfont.woff') format('woff');
+    src: url('../../../asset/font/junction-bold-webfont.woff2') format('woff2'),
+         url('../../../asset/font/junction-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'junctionlight';
+    src: url('junction-light-webfont.woff2') format('woff2'),
+         url('junction-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'junctionregular';
+    src: url('junction-regular-webfont.woff2') format('woff2'),
+         url('junction-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* #Site Header
 ================================================ */
-
-header {
-  border-bottom: 6px solid #faa801;
-  height: 50px;
-  width: 100%;
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #13a8dd -moz-linear-gradient(top, rgba(0, 18, 228, 0.2) 0%, rgba(0, 37, 171, 0.61) 100%);
-  background: #13a8dd -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(0, 0, 0, 0.2)));
-  background: #13a8dd -webkit-linear-gradient(top, rgba(0, 18, 228, 0.2) 0%, rgba(0, 37, 171, 0.61) 100%);
+header.site-headers {
+  .main-topupper-head{
+    font-family: junctionbold;
+  }
 }
-
-.wrapper-outerspaces {
-  margin-top: 100px;
-}
-
 /*-------------------
     nav-bar header
 ---------------------*/
@@ -50,13 +51,13 @@ nav.navbar-default {
   position: relative;
   z-index: 99999;
   width: 100%;
-  border-bottom: 6px solid #faa801;
+  border-bottom: 6px solid $pumpkin_yellow;
   border-radius: 0px;
   text-transform: uppercase;
   .navbar-nav > li > a {
     color: $primary_color;
     &:hover {
-      color: #faa801;
+      color: $pumpkin_yellow;
     }
   }
 }
@@ -73,14 +74,14 @@ nav.navbar-default {
 }
 
 .error {
-  color: #d80000;
+  color: $danger_color;
   font-size: 13px;
 }
 
 .main-container {
-  background: #fff url(../../../img/pattern.png) center 1px repeat-x;
-  border-bottom: 1px solid #e6e6e6;
-  border-top: 1px solid #e6e6e6;
+  background: $primary_color url(../../../img/pattern.png) center 1px repeat-x;
+  border-bottom: 1px solid $grey_mixies;
+  border-top: 1px solid $grey_mixies;
   display: block;
   width: 100%;
   height: 386px;
@@ -94,10 +95,10 @@ ul {
   list-style: none !important;
   &#lang {
     a {
-      color: #7d7d7d;
+      color: $grey_darkest;
       text-decoration: none;
       &:hover {
-        color: #fff;
+        color: $primary_color;
       }
     }
     li {
@@ -116,19 +117,17 @@ ul {
 #current {
   color: $primary_color;
   background: $pumpkin_yellow;
-  border-left: 1px solid #c1850c;
-  border-right: 1px solid #c1850c;
-  box-shadow: 0px -1px 1px #b1b1b1;
-  -webkit-box-shadow: 0px -1px 1px #b1b1b1;
-  -moz-box-shadow: 0px -1px 1px #b1b1b1;
+  border-left: 1px solid $brown-shocked;
+  border-right: 1px solid $brown-shocked;
+  @include box-shadow(0px, -1px, 1px, $grey_medium);
 }
 
 /* #Site Footer
 ================================================ */
 
 footer {
-  color: #000;
-  background: #f7f4ee;
+  color: $secondary_color;
+  background: $fourtd-color;
   padding: 20px 0 10px 0;
   width: 100%;
   display: inline-block;
@@ -140,14 +139,14 @@ footer {
   margin-left: 100px;
   display: inline-block;
   margin-top: 4px;
-  font-size: 13px;
+  @include font-size(12);
 }
 
 #nav-footer a {
-  color: #d1d1d1;
+  color:$foot_color;
   text-decoration: none;
   &:hover {
-    color: #fff;
+    color: $primary_color;
   }
 }
 
@@ -171,10 +170,10 @@ ul#nav-footer li {
 ---------------------------*/
 
 #slidecaption {
-  background: #fff;
+  background: $primary_color;
   bottom: 2%;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
-  font-size: 2.20em;
+  @include font-size(12px);
   line-height: 16px;
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
   padding: 15px;
@@ -1141,7 +1140,7 @@ img.career-viewstyle {
 /* ================ HOME PURPOSE ALRAMHA ===================*/
 
 .wrapper-containertopbase {
-  background: rgb(11, 114, 207);
+  background: $blues_skyhigh;
   display: inline-block;
   width: 100%;
   height: 220px;
@@ -1157,8 +1156,8 @@ img.career-viewstyle {
 }
 
 .main-innerboxt-tujuanalrahma {
-  border: 6px solid #d7d7d7;
-  background: #fff;
+  border: 6px solid $grey_border;
+  background: $primary_color;
   width: 100%;
   > {
     .box-circletujuanalquran {

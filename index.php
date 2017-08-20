@@ -69,24 +69,27 @@ include"config/config.php"; ?>
 <body>
 <!-- responsive menu on mobile device -->
 	<div class="container navigate-top-upper">
-		<div class="col-lg-12 col-md-6 col-xs-12 col-sm-12">
-			<div class="col-sm-12">
-				<div class="row">
-					<div class="pull-left col-sm-12 col-lg-3">
-	        			<img src="img/alrahma-logos.png" class="img-responsive" style="width:185px;height:auto;margin-top: 15px;">
-						<h6 class="text-center"><strong>ISLAMIC PRESSCHOOL & KINDERGARTEN</strong></h6>
-					</div>
-					<div class="pull-left">
-						<div class="col-sm-12 col-md-6 col-lg-12">
-							<div class="container-header">
-								<h2>Al Rahma</h2>
-								<h3>Islamic Preschol And Kindergarten</h3>
-								<h5>Jln.Linggamas No 8 Sokaraja Wetan Banyumas 53181</h5>
+		<header>
+			<div class="site-headers col-lg-12 col-md-6 col-xs-12 col-sm-12">
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="pull-left col-sm-12 col-lg-3">
+		        			<img src="img/alrahma-logos.png" class="img-responsive" style="width:185px;height:auto;margin-top: 15px;">
+							<h6 class="text-center"><strong>ISLAMIC PRESSCHOOL & KINDERGARTEN</strong></h6>
+						</div>
+						<div class="pull-left main-topupper-head">
+							<div class="col-sm-12 col-md-6 col-lg-12">
+								<div class="container-header">
+									<h2 class="sub-titles">Al Rahma</h2>
+									<h3 class="second-title">Islamic Preschol And Kindergarten</h3>
+									<h5 class="third-title">Jln.Linggamas No 8 Sokaraja Wetan Banyumas 53181</h5>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</header>
 			<div class="col-md-7">
 				<div class="main-top-contain-right">
 					<ul class="dropdown-menu">
@@ -102,8 +105,8 @@ include"config/config.php"; ?>
 			</div>
 		</div>
 	</div>
-	<nav id="header-full" class="navbar navbar-default" role="navigation">
-		<div class="navbar-header" id="main-header">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
 	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
 	            <span class="sr-only">Toggle Responsive</span>
 	            <span class="icon-bar"></span>
@@ -123,7 +126,7 @@ include"config/config.php"; ?>
 		?>
 		 <div class="container">
 	        	<div class="row"> 
-					<!-- <div id="logo"></div> -->
+					<div id="logo"></div>
 					<div class="collapse navbar-collapse col-md-offset-1" id="navbar-collapse">
 						<!-- id="main-nav" class="sf-menu" -->
 						<ul class="nav navbar-nav">
@@ -155,7 +158,7 @@ include"config/config.php"; ?>
 			    <div class="main-innerfooter">
 			    	Copyright © <?php echo "Al-Rahma Preschool and Kindergarten 2017 ".date("Y");?>
 			    </div>
-			    <ul id="nav-footer " style="margin-bottom:0px!important;">
+			    <ul id="nav-footer "style="margin-bottom:0px!important;">
 			    	<li class="li-nav-alrahma">
 		    			<span><a href=""><img src="img/instagram.png"></a></span>
 		    			<span style="margin-left:3px;"><a href=""><img src="img/facebook.png"></a></span>

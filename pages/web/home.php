@@ -70,6 +70,7 @@
 	</div>
 </div>
 <!-- ====================== SLIDER ================-->
+<div class="clearfix"></div>
 <div class="row">
 	<div class="wrapper-containertopbase"></div>
 	<!-- ====================== CONTENT TUJUAN PENDIDIKAN ALRAHMA ================-->
@@ -118,43 +119,43 @@
 				</div><!--row-->	
 			</section><!--container-->
 		</div><!--wrapperbox-tujuanalrahma-->
-<!-- ====================== CONTENT TUJUAN PENDIDIKAN ALRAHMA ================-->
-<div class="event-maincontainer">
-		<section class="article-container">
-			<div class="heading-responsive">
-				<h2 style="text-align:center;margin-bottom:50px;">Event Al-Rahma Preschool and Kindergarten</h2>
-			</div>
-			<!-- RESPONSIVE -->
-			<div class="article-mainevent">
-				<article></article>
-			</div>
-		</section>
-		<!-- TESTIMONIALS EVENT -->
-		<section class="container testimonials">
-			<div class="row">
-		        <div class="col-sm-12">
-		          <div id="event-testimonials" class="owl-carousel">
-		      	  <?php
+	<!-- ====================== CONTENT TUJUAN PENDIDIKAN ALRAHMA ================-->
+	<div class="event-maincontainer">
+			<section class="article-container">
+				<div class="heading-responsive">
+					<h2 style="text-align:center;margin-bottom:50px;">Event Al-Rahma Preschool and Kindergarten</h2>
+				</div>
+				<!-- RESPONSIVE -->
+				<div class="article-mainevent">
+					<article></article>
+				</div>
+			</section>
+			<!-- TESTIMONIALS EVENT -->
+			<section class="container testimonials">
+				<div class="row">
+			        <div class="col-sm-12">
+			          <div id="event-testimonials" class="owl-carousel">
+			      	  <?php
 
-					$getevent =mysqli_query($con,"SELECT * FROM event ORDER BY id_event DESC");
-					while ($res = mysqli_fetch_array($getevent)) {
+						$getevent =mysqli_query($con,"SELECT * FROM event ORDER BY id_event DESC");
+						while ($res = mysqli_fetch_array($getevent)) {
 
-				   ?>
-		            <div class="item">
-		              <div class="shadow-effect">
-		                <img class="img-circle resize-imgevent lazyOwl" data-src="<?php echo $base_url;?>uploads/images/event/<?php echo $res['foto_event']; ?>" alt="">
-		                <h3 class="heading-sliderevent"><?php echo removeStriptagS($res['judul_event']);?></h3>
-		                <p style="font-style:italic;"><?php echo removeStriptagS($res['keterangan_event']);?>
-		              		<?php  echo "<a href='".$base_url."eventdetail-$res[id_event].html' class='readmore-link'>Readmore</a>" ?>
-		                </p>
-		              </div><!-- shadow effect-->
-		            </div><!-- item-->
-		           <?php } ?>
-		          </div><!--event-testimonials-->
-		        </div><!--col-sm-12-->
-			</div><!--row-->
-		</section>
-</div><!-- event-maincontainer -->
+					   ?>
+			            <div class="item">
+			              <div class="shadow-effect">
+			                <img class="img-circle resize-imgevent lazyOwl" data-src="<?php echo $base_url;?>uploads/images/event/<?php echo $res['foto_event']; ?>" alt="">
+			                <h3 class="heading-sliderevent"><?php echo removeStriptagS($res['judul_event']);?></h3>
+			                <p style="font-style:italic;"><?php echo removeStriptagS($res['keterangan_event']);?>
+			              		<?php  echo "<a href='".$base_url."eventdetail-$res[id_event].html' class='readmore-link'>Readmore</a>" ?>
+			                </p>
+			              </div><!-- shadow effect-->
+			            </div><!-- item-->
+			           <?php } ?>
+			          </div><!--event-testimonials-->
+			        </div><!--col-sm-12-->
+				</div><!--row-->
+			</section>
+	</div><!-- event-maincontainer -->
 	<div class="container">	
 		<div class="main-konsultasi">
 			<div class="heading-konsultasi">
