@@ -57,7 +57,7 @@
 <!-- ====================== SLIDER ================-->
 <!-- Margin top container slider -->
 <div class="row">
-	<div class="col-lg-10 col-lg-offset-1" style="margin-top:55px;">
+	<div class="col-lg-10 col-lg-offset-1">
 		<div id="owl-example" class="owl-carousel owl-theme hidden-xs" style="box-shadow: #dcdcdc 0px 3px 28px; border: 5px solid #fff;">
 			 <?php
 			 	$x =mysqli_query($con,"SELECT * FROM slider");
@@ -70,9 +70,10 @@
 	</div>
 </div>
 <!-- ====================== SLIDER ================-->
-<div class="wrapper-containertopbase"></div>
-<!-- ====================== CONTENT TUJUAN PENDIDIKAN ALRAHMA ================-->
-<div class="tujuan-maincontainer">
+<div class="row">
+	<div class="wrapper-containertopbase"></div>
+	<!-- ====================== CONTENT TUJUAN PENDIDIKAN ALRAHMA ================-->
+	<div class="tujuan-maincontainer">
 	<section class="article-tujuan">
 		<div class="heading-responsive">
 			<h2 style="text-align:center;color:#fff;">Mengapa Al-Rahma Preschool and Kindergarten</>
@@ -114,7 +115,6 @@
 							</div>
 						</div>
 					</div>
-
 				</div><!--row-->	
 			</section><!--container-->
 		</div><!--wrapperbox-tujuanalrahma-->
@@ -155,129 +155,129 @@
 			</div><!--row-->
 		</section>
 </div><!-- event-maincontainer -->
-
-<div class="container">	
-<div class="main-konsultasi">
-	<div class="heading-konsultasi">
-		<h2 style="text-align:center;">Konsultasi Al-Rahma Preschool and Kindergarten</h2>
-	</div>
-	<section class="container hidden-xs">
-		<div class="box-ruleskonsultasi">
-			<div class="rules-rulkonsultasi icon-formulir"></div>
-				<div>
-					<div>Formulir Konsultasi</div>
-					<span class="number1"></span>
-				</div>
-		</div>
-		<div class="box-ruleskonsultasi">
-			<div class="rules-rulkonsultasi icon-boxproses"></div>
-				<div>
-					<div>Sistem Mengirim Data</div>
-					<span class="number2"></span>
-				</div>
-		</div>
-		<div class="box-ruleskonsultasi">
-			<div class="rules-rulkonsultasi icon-chats"></div>
-				<div>
-					<div>Konsultasi dengan kami</div>
-					<span class="number3"></span>
-				</div>
-		</div>
-	</section>
-	<div id="tabs-container">
-		<ul class="tabs-menu">
-			<li class="current"><a href="#tab-1"><i class="fa fa-book" aria-hidden="true"></i> Latest Consultation</a></li>
-		</ul>
-		<div class="wrapper-latestcontainer consultation">
-		<ul>
-			<?php
-				//set limits
-				$limit =4;
-				// random consultasi
-				$get_consultasi = mysqli_query($con,"SELECT * FROM testimoni ORDER BY id_testimoni DESC LIMIT $limit");
-				while ($res =mysqli_fetch_array($get_consultasi)) {
-				$convrt = $res['tgl_testi'];
-				$substr = substr($convrt, 10);
-				$getanswer = $res['id_testimoni'];
-
-				$tes = mysqli_fetch_array(mysqli_query($con,"SELECT * FROM analisa_testi at JOIN testimoni t  ON t.id_testimoni=at.id_testimoni
-				WHERE at.id_testimoni='$getanswer'"));
-				$showaction= $tes['answer_testi'];
-				$convrtanswer_date = $tes['tgl_answer'];
-				$substr2 = substr($convrtanswer_date, 10);
-
-			?>
-			<li style="opactiy:1;">
-				<div style="font-size:17px;">
-					<span style="font-weight:bold;"><?php echo $res['nama_testi'];?></span>
-				</div>
-				<div style="margin-bottom:10px;">
-					<span><i class="fa fa-calendar-o"></i> <?php echo tgl_indo($res['tgl_testi']);echo $substr;?></span>
-				</div>
-				<div>
-					<?php echo $res['keluhan_testi']; ?>
-				</div>
-				<!--check jika tidak ada tanggapan dari admin css style anwer do'not show in container-->
-				<?php if ($showaction =='' || $showaction == null) { ?>
-
-				<?php }else{ ?>
-				<div class="consul">
-					<div class="answer">
-						<div class="user-images">
-							<div style="margin-left:45px;font-weight:bold;">Jawaban dari : <?php echo $tes['sesi_user'];?></div>
-
-							<span class="admin-rounded-date">
-							<i class="fa fa-calendar-o"></i> <?php echo tgl_indo($res['tgl_testi']);echo $substr2;?></span>
+	<div class="container">	
+		<div class="main-konsultasi">
+			<div class="heading-konsultasi">
+				<h2 style="text-align:center;">Konsultasi Al-Rahma Preschool and Kindergarten</h2>
+			</div>
+			<section class="container hidden-xs">
+				<div class="box-ruleskonsultasi">
+					<div class="rules-rulkonsultasi icon-formulir"></div>
+						<div>
+							<div>Formulir Konsultasi</div>
+							<span class="number1"></span>
 						</div>
-						<?php echo $showaction; ?>
-					</div>
 				</div>
-				<?php } ?>
-			</li>
-			<?php } ?>
-		</ul>
+				<div class="box-ruleskonsultasi">
+					<div class="rules-rulkonsultasi icon-boxproses"></div>
+						<div>
+							<div>Sistem Mengirim Data</div>
+							<span class="number2"></span>
+						</div>
+				</div>
+				<div class="box-ruleskonsultasi">
+					<div class="rules-rulkonsultasi icon-chats"></div>
+						<div>
+							<div>Konsultasi dengan kami</div>
+							<span class="number3"></span>
+						</div>
+				</div>
+			</section>
+			<div id="tabs-container">
+				<ul class="tabs-menu">
+					<li class="current"><a href="#tab-1"><i class="fa fa-book" aria-hidden="true"></i> Latest Consultation</a></li>
+				</ul>
+				<div class="wrapper-latestcontainer consultation">
+					<ul>
+						<?php
+							//set limits
+							$limit =4;
+							// random consultasi
+							$get_consultasi = mysqli_query($con,"SELECT * FROM testimoni ORDER BY id_testimoni DESC LIMIT $limit");
+							while ($res =mysqli_fetch_array($get_consultasi)) {
+							$convrt = $res['tgl_testi'];
+							$substr = substr($convrt, 10);
+							$getanswer = $res['id_testimoni'];
+
+							$tes = mysqli_fetch_array(mysqli_query($con,"SELECT * FROM analisa_testi at JOIN testimoni t  ON t.id_testimoni=at.id_testimoni
+							WHERE at.id_testimoni='$getanswer'"));
+							$showaction= $tes['answer_testi'];
+							$convrtanswer_date = $tes['tgl_answer'];
+							$substr2 = substr($convrtanswer_date, 10);
+
+						?>
+						<li style="opactiy:1;">
+							<div style="font-size:17px;">
+								<span style="font-weight:bold;"><?php echo $res['nama_testi'];?></span>
+							</div>
+							<div style="margin-bottom:10px;">
+								<span><i class="fa fa-calendar-o"></i> <?php echo tgl_indo($res['tgl_testi']);echo $substr;?></span>
+							</div>
+							<div>
+								<?php echo $res['keluhan_testi']; ?>
+							</div>
+							<!--check jika tidak ada tanggapan dari admin css style anwer do'not show in container-->
+							<?php if ($showaction =='' || $showaction == null) { ?>
+
+							<?php }else{ ?>
+							<div class="consul">
+								<div class="answer">
+									<div class="user-images">
+										<div style="margin-left:45px;font-weight:bold;">Jawaban dari : <?php echo $tes['sesi_user'];?></div>
+
+										<span class="admin-rounded-date">
+										<i class="fa fa-calendar-o"></i> <?php echo tgl_indo($res['tgl_testi']);echo $substr2;?></span>
+									</div>
+									<?php echo $showaction; ?>
+								</div>
+							</div>
+							<?php } ?>
+						</li>
+						<?php } ?>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<a href="<?php echo $base_url;?>consultasi.html" class="btn btn-danger"><i class="fa fa-plus"></i> Konsultasi Sekarang</a>
+			</div>
+		</div><!-- container -->
 	</div>
-	<div>
-		<a href="<?php echo $base_url;?>consultasi.html" class="btn btn-danger"><i class="fa fa-plus"></i> Konsultasi Sekarang</a>
-	</div>
-</div><!-- container -->
-</section>
+	<!-- CONTENT SLIDER -->
+	<section class="section home-blog hidden-xs">
+	    <div class="max-width centered ">
+	        <div class="blog-carousel ">
+				<section class="slider-navalrahma slider">
+		    		<?php
+
+		    			$show =mysqli_query($con,"SELECT * FROM berita ORDER BY id_berita DESC");
+		    			while ($view= mysqli_fetch_array($show)) {
+
+		    			//url basepath file
+						$base_path_file  = $base_url."uploads/images/berita/".$view['foto_berita'];
+						$karakter_career = $view['ket_berita'];
+						$konvert_career  = strip_tags(html_entity_decode($karakter_career,ENT_QUOTES,"ISO-8859-1"));
+
+		    			//url judul cleaner 
+		    			$clean = urlCleaner($view['judul_berita']);
+						//url link
+						$url_link = "newsdetail".$view['id_berita']."-".$clean.".html";
+		    		?>
+			    	<div class="wrapper">
+						<h4 style="margin-bottom:10px;"><a href=""><?php echo strip_tags($view['judul_berita']);?></a></h4>
+			      		<!-- <img src="<?php echo $base_path_file;?>"> -->
+			      		<article data-lazy="">
+			      			<div style="margin-bottom:10px;">Posted tanggal: <?php echo tgl_indo($view['tanggal_berita']);?></div>
+	      				<?php
+
+						  if (strlen($karakter_career) >=300) {
+							/*echo substr($konvert_career, 0, 300)."<a class='readmore-link' href='".$base_url."newsdetail-$view[id_berita].html'> [Readmore]</a>"; } */
+							echo substr($konvert_career, 0, 300)."<a class='readmore-link' href=\"".$url_link."\"> [Readmore]</a>"; }
+				      	?>
+				      	</article>
+			      	</div>
+			      	<?php } ?>
+			    </section><!--regular slider-->
+	        </div><!--Blog carousel -->
+	    </div><!--max width centered-->
+	</section><!-- section end blog -->
 </div>
-<!-- CONTENT SLIDER -->
-<section class="section home-blog hidden-xs">
-    <div class="max-width centered ">
-        <div class="blog-carousel ">
-			<section class="slider-navalrahma slider">
-	    		<?php
-
-	    			$show =mysqli_query($con,"SELECT * FROM berita ORDER BY id_berita DESC");
-	    			while ($view= mysqli_fetch_array($show)) {
-
-	    			//url basepath file
-					$base_path_file  = $base_url."uploads/images/berita/".$view['foto_berita'];
-					$karakter_career = $view['ket_berita'];
-					$konvert_career  = strip_tags(html_entity_decode($karakter_career,ENT_QUOTES,"ISO-8859-1"));
-
-	    			//url judul cleaner 
-	    			$clean = urlCleaner($view['judul_berita']);
-					//url link
-					$url_link = "newsdetail".$view['id_berita']."-".$clean.".html";
-	    		?>
-		    	<div class="wrapper">
-					<h4 style="margin-bottom:10px;"><a href=""><?php echo strip_tags($view['judul_berita']);?></a></h4>
-		      		<!-- <img src="<?php echo $base_path_file;?>"> -->
-		      		<article data-lazy="">
-		      			<div style="margin-bottom:10px;">Posted tanggal: <?php echo tgl_indo($view['tanggal_berita']);?></div>
-      				<?php
-
-					  if (strlen($karakter_career) >=300) {
-						/*echo substr($konvert_career, 0, 300)."<a class='readmore-link' href='".$base_url."newsdetail-$view[id_berita].html'> [Readmore]</a>"; } */
-						echo substr($konvert_career, 0, 300)."<a class='readmore-link' href=\"".$url_link."\"> [Readmore]</a>"; }
-			      	?>
-			      	</article>
-		      	</div>
-		      	<?php } ?>
-		    </section><!--regular slider-->
-        </div><!--Blog carousel -->
-    </div><!--max width centered-->
-</section><!-- section end blog -->

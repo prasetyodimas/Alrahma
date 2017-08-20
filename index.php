@@ -37,9 +37,34 @@ include"config/config.php"; ?>
 <script src="<?php echo $base_url;?>js/pretty-foto/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php echo $base_url;?>js/gallery.js"></script>
 <script src="<?php echo $base_url;?>js/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript">
+	$(window).scroll(function () {
+        if ($(document).scrollTop() <= 40) {
+            $('#header-full').removeClass('small');
+            $('.tabs-blur').removeClass('no-blur');
+            $('#main-header').removeClass('small');
+        } else {
+            $('#header-full').addClass('small');
+            $('.tabs-blur').addClass('no-blur');
+            $('#main-header').addClass('small');
+        }
+    });
+</script>
 </head>
 <style type="text/css">
-	.main-heading-alrahma{padding: 10px; } div.navigate-top-upper {position:relative; bottom:0; right:0; } span {color:#000;} 
+	#main-header.small {
+	    height: 60px;
+	    position: fixed;
+	}
+	#header-full.small {
+	    height: 60px;
+	    transition: height 0.2s ease-in-out;
+	    -webkit-transition: height 0.2s ease-in-out;
+	    -moz-transition: height 0.2s ease-in-out;
+	    -o-transition: height 0.2s ease-in-out;
+	    -ms-transition: height 0.2s ease-in-out;
+	    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	}
 </style>
 <body>
 <!-- responsive menu on mobile device -->
@@ -77,8 +102,8 @@ include"config/config.php"; ?>
 			</div>
 		</div>
 	</div>
-	<nav id="mobile" class="navbar navbar-default" role="navigation">
-		<div class="navbar-header">
+	<nav id="header-full" class="navbar navbar-default" role="navigation">
+		<div class="navbar-header" id="main-header">
 	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
 	            <span class="sr-only">Toggle Responsive</span>
 	            <span class="icon-bar"></span>

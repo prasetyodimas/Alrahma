@@ -9,6 +9,17 @@
     Development  : Alramha Presscholl And Kindergarten
 --------------------------------------------------------*/
 
+/* #Font Face
+=============================================== */
+@font-face {
+    font-family: 'junctionbold';
+    src: url('junction-bold-webfont.woff2') format('woff2'),
+         url('junction-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* #Site Header
 ================================================ */
 
@@ -32,9 +43,7 @@ header {
 /*-------------------
     nav-bar header
 ---------------------*/
-.navbar {}
-
-.navbar-default {
+nav.navbar-default {
   background: #13a8dd -moz-linear-gradient(top, rgba(0, 18, 228, 0.2) 0%, rgba(0, 37, 171, 0.61) 100%);
   background: #13a8dd -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(0, 0, 0, 0.2)));
   background: #13a8dd -webkit-linear-gradient(top, rgba(0, 18, 228, 0.2) 0%, rgba(0, 37, 171, 0.61) 100%);
@@ -45,7 +54,7 @@ header {
   border-radius: 0px;
   text-transform: uppercase;
   .navbar-nav > li > a {
-    color: #fff;
+    color: $primary_color;
     &:hover {
       color: #faa801;
     }
@@ -69,7 +78,7 @@ header {
 }
 
 .main-container {
-  background: #fff url(../img/pattern.png) center 1px repeat-x;
+  background: #fff url(../../../img/pattern.png) center 1px repeat-x;
   border-bottom: 1px solid #e6e6e6;
   border-top: 1px solid #e6e6e6;
   display: block;
@@ -105,8 +114,8 @@ ul {
 }
 
 #current {
-  color: #fff;
-  background: #faa801;
+  color: $primary_color;
+  background: $pumpkin_yellow;
   border-left: 1px solid #c1850c;
   border-right: 1px solid #c1850c;
   box-shadow: 0px -1px 1px #b1b1b1;
@@ -143,7 +152,7 @@ footer {
 }
 
 ul#nav-footer li {
-  background: url(../img/menu_footer_divider.png) left center no-repeat;
+  background: url(../../../img/menu_footer_divider.png) left center no-repeat;
   float: left;
   margin-right: 10px;
   padding-left: 10px;
@@ -191,12 +200,12 @@ ul#nav-footer li {
 }
 
 #prevslide {
-  background: url('../img/back.png');
+  background: url('../../../img/back.png');
   left: 10px;
 }
 
 #nextslide {
-  background: url('../img/forward.png');
+  background: url('../../../img/forward.png');
   right: 10px;
 }
 
@@ -357,11 +366,11 @@ span.required {
   .slick-prev {
     left: -35px;
     &:before {
-      background: url(../img/carousel-left.png) 0 0 no-repeat;
+      background: url(../../../img/carousel-left.png) 0 0 no-repeat;
     }
   }
   .slick-next:before {
-    background: url(../img/carousel-right.png) 0 0 no-repeat;
+    background: url(../../../img/carousel-right.png) 0 0 no-repeat;
   }
 }
 
@@ -666,7 +675,7 @@ img.box-imagenewsdetail {
 
 span {
   &.number1 {
-    background: url(../img/number1.png) no-repeat;
+    background: url(../../../img/number1.png) no-repeat;
     width: 50px;
     height: 50px;
     display: inline-block;
@@ -675,7 +684,7 @@ span {
     left: 39px;
   }
   &.number2 {
-    background: url(../img/number2.png) no-repeat;
+    background: url(../../../img/number2.png) no-repeat;
     width: 50px;
     height: 50px;
     display: inline-block;
@@ -684,7 +693,7 @@ span {
     left: 48px;
   }
   &.number3 {
-    background: url(../img/number3.png) no-repeat;
+    background: url(../../../img/number3.png) no-repeat;
     width: 50px;
     height: 50px;
     display: inline-block;
@@ -696,16 +705,16 @@ span {
 
 div {
   &.icon-formulir {
-    background: url(../img/formulir.png) no-repeat;
+    background: url(../../../img/formulir.png) no-repeat;
   }
   &.icon-boxproses {
-    background: url(../img/box-proggres.png) no-repeat;
+    background: url(../../../img/box-proggres.png) no-repeat;
     position: relative;
     top: 3px;
     left: 9px;
   }
   &.icon-chats {
-    background: url(../img/chats.png) no-repeat;
+    background: url(../../../img/chats.png) no-repeat;
     position: relative;
     top: 17px;
     left: 15px;
@@ -822,22 +831,6 @@ li.nav-li-event {
     }
   }
 }
-
-/*.btn {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 14px;
-    color: #fff !important;
-    border: 2px solid #4d92d9;
-    background-color: #4d92d9;
-    text-decoration: none;
-    transition: 0.4s;
-}
-.btn:hover {
-    background-color: transparent;
-    color: #4d92d9 !important;
-    transition: 0.4s;
-}*/
 
 .text-desc {
   position: absolute;
@@ -991,7 +984,7 @@ span.required {
 }
 
 .user-images {
-  background-image: url(../img/user.png);
+  background-image: url(../../../img/user.png);
   background-repeat: no-repeat;
   display: block;
   width: 300px;
