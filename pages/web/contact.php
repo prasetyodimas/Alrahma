@@ -31,7 +31,6 @@
 	});
 </script>
 <section class="container">
-<div style="margin-top:80px;">
 	<ul class="nav-ul-breadcumb">
 		<li class="nav-li-breadcumb"><i class="fa fa-home"></i> Home >> Contact Us</li>
 	</ul>
@@ -83,6 +82,6 @@
 			</div><!--box main-contact -->
 		 </div><!-- map -->
 	</div><!--contact -->
-</div><!-- clearfix-top-->
-<div style="margin-top:68px;display:inline-block;"></div>
+	<div class="clearfix"></div>
+	<div style="margin-top:100px;"></div>
 </section>

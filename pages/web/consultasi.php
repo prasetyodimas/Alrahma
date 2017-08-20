@@ -37,14 +37,12 @@
 </script>
 
 <section class="container">
-<div class="wrapper-outerspaces">
-<div>
-	<ul class="nav-ul-breadcumb">
-		<li class="nav-li-breadcumb"><i class="fa fa-home"></i> Home >> Konsultasi</li>
-	</ul>
-</div>
-
-<?php include "libs/funct/library_function.php"; ?>
+	<div>
+		<ul class="nav-ul-breadcumb">
+			<li class="nav-li-breadcumb"><i class="fa fa-home"></i> Home >> Konsultasi</li>
+		</ul>
+	</div>
+	<?php include "libs/funct/library_function.php"; ?>
 
 	<h3>KONSULTASI</h3>
 	<h5 style="line-height:20px;">
@@ -59,7 +57,7 @@
 	<div class="main-rightconsultasi">
 		<img src="<?php echo $base_url; ?>img/woman-doctor.png">
 	</div>
-	<section class="form-konsultasi">
+	<div class="form-konsultasi">
 		<form action="pages/proses/proses_testi.php?act=addconsultasi" method="post" id="validate-consultation" enctype="multipart/form-data">
 			<div>
 				<div>
@@ -92,6 +90,5 @@
 				</div>
 			</div>
 		</form>
-	</section>
-</div>
+	</div>
 </section>
