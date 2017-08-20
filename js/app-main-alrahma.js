@@ -21,11 +21,11 @@ $(document).ready(function(){
 	    }
 	});
 
-	$(function minimizedHeader(){
+/*	$(function minimizedHeader(){
 		if ($(window) scrollTop() > 60) {
 			$('#mobile').addClass('header-minimized');
 		}
-	});
+	});*/
 
 	var didScroll;
 	// on scroll, let the interval function know the user has scrolled
