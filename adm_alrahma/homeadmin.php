@@ -28,8 +28,8 @@ include("../config/config.php");
 	<link href="css/paging.css" rel="stylesheet">
 	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
 	<!-- Favicons-->
-	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="<?php echo $base_url?>../../../img/favicon-alrahma.png" type="image/x-icon">
+	<link rel="icon" href="<?php echo $base_url?>../../../img/favicon-alrahma.png" type="image/x-icon">
 	<!-- font awesome -->
 	<link href="<?php echo $base_url;?>adm_alrahma/js/jquery.dataTables.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
@@ -41,7 +41,6 @@ include("../config/config.php");
  	<script type="text/javascript">
         $(document).ready(function () {
             $('.dropdown-toggle').dropdown();
-            /*check();*/
         });
 	</script>
 	</head>
@@ -60,9 +59,6 @@ include("../config/config.php");
 						<li class="active">
 							<a href="homeadmin.php">Dashboard</a>
 						</li>
-                		<!-- <li id="notif">
-			  	 			<a href="#">Notifikasi Kosultasi<span class="bubble" id="jumlah_pesanan"></span></a>
-                		</li> -->
                         <li class="dropdown">
                         	<a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> Konfigurasi <b class="caret"></b></a>
 	                        <ul class="dropdown-menu">

@@ -27,7 +27,7 @@
 	            </li>
 			<?php } ?>
 	      	</ul>
-	  	<div style="margin-bottom:0px;display:inline-block;"></div>
+	  	<div style="margin-bottom:165px;display:inline-block;"></div>
   	</div>
 </section>
 

@@ -7,8 +7,8 @@ include"config/config.php"; ?>
 <!-- ANALYTICS JS -->
 <meta charset="utf-8">
 <meta name="author" content="Al-Rahma Presschool and Kindergarten <vladclaystudios>">
-<meta name="description" content="Konsultan pendidikan, Konsultasi, Study, Pembelajaran Terpadu, Belajar Dan Bermain, Edukasi, Interaktif, Dunia Anak-anak, PAUDTKSD, Alquran, Sekolah Anak, AlRahma Presschool and Kindergarten sekolah dan yayasan konsultasi,dunia pembelajaran anak-anak,dunia perkembangan anak sebelum memasuki pra sekolah, menerapkan sistem alquran sebagai media dan metode pembelajarannya, Alrahma, PAUDTKSD">
-<meta name="keywords" content="Konsultan pendidikan, Konsultasi, Study, Pembelajaran Terpadu, Belajar Dan Bermain, Edukasi, Interaktif, Dunia Anak-anak, PAUDTKSD, Alquran, Sekolah Anak, AlRahma Presschool and Kindergarten sekolah dan yayasan konsultasi,dunia pembelajaran anak-anak,dunia perkembangan anak sebelum memasuki pra sekolah, menerapkan sistem alquran sebagai media dan metode pembelajarannya, Alrahma, PAUDTKSD">
+<meta name="description" content="Al-Rahma.id  Al Rahma School, Konsultan pendidikan, Konsultasi, Study, Pembelajaran Terpadu, Belajar Dan Bermain, Edukasi, Interaktif, Dunia Anak-anak, PAUDTKSD, Alquran, Sekolah Anak, AlRahma Presschool and Kindergarten sekolah dan yayasan konsultasi,dunia pembelajaran anak-anak,dunia perkembangan anak sebelum memasuki pra sekolah, menerapkan sistem alquran sebagai media dan metode pembelajarannya, Alrahma, PAUDTKSD">
+<meta name="keywords" content="Al-Rahma.id, Al Rahma School, Konsultan pendidikan, Konsultasi, Study, Pembelajaran Terpadu, Belajar Dan Bermain, Edukasi, Interaktif, Dunia Anak-anak, PAUDTKSD, Alquran, Sekolah Anak, AlRahma Presschool and Kindergarten sekolah dan yayasan konsultasi,dunia pembelajaran anak-anak,dunia perkembangan anak sebelum memasuki pra sekolah, menerapkan sistem alquran sebagai media dan metode pembelajarannya, Alrahma, PAUDTKSD">
 <!-- Mobile Specific Meta -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!-- FAVICONS-->
@@ -75,13 +75,13 @@ include"config/config.php"; ?>
 					<div class="row">
 						<div class="pull-left col-sm-12 col-lg-3">
 		        			<img src="img/alrahma-logos.png" class="img-responsive" style="width:185px;height:auto;margin-top: 15px;">
-							<h6 class="text-center"><strong>ISLAMIC PRESSCHOOL & KINDERGARTEN</strong></h6>
+							<h6 class="text-center"><strong>AL-RAHMA PRESSCHOOL & KINDERGARTEN</strong></h6>
 						</div>
 						<div class="pull-left main-topupper-head">
 							<div class="col-sm-12 col-md-6 col-lg-12">
 								<div class="container-header">
-									<h2 class="sub-titles">Al Rahma</h2>
-									<h3 class="second-title">Islamic Preschol And Kindergarten</h3>
+									<h2 class="sub-title">Al Rahma</h2>
+									<h3 class="second-title">Preschol And Kindergarten</h3>
 									<h5 class="third-title">Jln.Linggamas No 8 Sokaraja Wetan Banyumas 53181</h5>
 								</div>
 							</div>
@@ -156,9 +156,9 @@ include"config/config.php"; ?>
 		<footer>
 			<div class="container">
 			    <div class="main-innerfooter">
-			    	Copyright © <?php echo "Al-Rahma Preschool and Kindergarten 2017 ".date("Y");?>
+			    	Copyright © <?php echo "Al-Rahma Preschool and Kindergarten ".date("Y");?>
 			    </div>
-			    <ul id="nav-footer "style="margin-bottom:0px!important;">
+			    <ul id="nav-footer">
 			    	<li class="li-nav-alrahma">
 		    			<span><a href=""><img src="img/instagram.png"></a></span>
 		    			<span style="margin-left:3px;"><a href=""><img src="img/facebook.png"></a></span>
